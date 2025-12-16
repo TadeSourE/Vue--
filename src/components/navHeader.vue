@@ -4,7 +4,23 @@
             <el-icon class="icon" size="20"><Fold/></el-icon>
         </div>
         <div class="header-right">
-
+            <el-dropdown>
+                <div class="el-dropdown-link flex-box">
+                    <el-avatar
+                        src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
+                    />
+                    <p class="user-name">admin</p>
+                </div>
+                <template #dropdown>
+                <el-dropdown-menu>
+                    <el-dropdown-item>Action 1</el-dropdown-item>
+                    <el-dropdown-item>Action 2</el-dropdown-item>
+                    <el-dropdown-item>Action 3</el-dropdown-item>
+                    <el-dropdown-item disabled>Action 4</el-dropdown-item>
+                    <el-dropdown-item divided>Action 5</el-dropdown-item>
+                </el-dropdown-menu>
+                </template>
+            </el-dropdown>
         </div>
     </div>
 </template>
@@ -27,15 +43,32 @@ import { Fold } from '@element-plus/icons-vue';
     background-color: #fff;
     padding-right: 25px;
     .header-left{
-        height: 100%;
+        height: 100%;      
         .icon{
             width: 45px;
             height: 100%;
             &:hover{
-            background-color: #818181;
+            background-color: #daf3f8;
             cursor: pointer;
             }
         }
     }
+    .header-right{
+        height: 100%;
+        .el-dropdown-link {
+            cursor: pointer;
+            align-items: center;
+            outline: none;
+            &:hover{
+            background-color: #daf3f8;
+            cursor: pointer;
+            }
+
+        .user-name{
+            margin-left:20px ;
+            margin-right:20px ;
+        }
+    }
+}
 }
 </style>
