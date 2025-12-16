@@ -1,0 +1,21 @@
+body {
+  /* 宽度（可设固定值、百分比、max-width 等） */
+  width: 100%;
+  max-width: 1920px; /* 最大宽度限制 */
+  margin: 0 auto; /* 居中 */
+  
+  /* 高度（常用 min-height 避免内容不足时页面空白） */
+  min-height: 100vh; /* 占满视口高度 */
+  height: auto; /* 内容超出时自动撑开 */
+  
+  /* 可选：内边距、盒模型等 */
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* 隐藏横向滚动 */
+}
+#app {
+  height: 100vh; /* 视口高度，适配所有屏幕 */
+  margin: 0; /* 消除默认边距，避免高度错位 */
+  padding: 0;
+  box-sizing: border-box; /* 保证padding/border不额外增加高度 */
+}
