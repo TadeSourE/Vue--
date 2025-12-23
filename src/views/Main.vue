@@ -18,7 +18,7 @@ import navHeader from '../components/navHeader.vue';
 </script>
 <style lang="less" scoped>
     .common-layout{
-        height: 100vh;
+        height: 100%;
         .el-container{
             height: 100%;
         }

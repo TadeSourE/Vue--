@@ -1,4 +1,4 @@
-body {
+html,body {
   /* 宽度（可设固定值、百分比、max-width 等） */
   width: 100%;
   max-width: 1920px; /* 最大宽度限制 */
@@ -18,4 +18,11 @@ body {
   margin: 0; /* 消除默认边距，避免高度错位 */
   padding: 0;
   box-sizing: border-box; /* 保证padding/border不额外增加高度 */
+}
+.el-container {
+  height: 100%;
+}
+
+.el-aside {
+  height: 100%;
 }

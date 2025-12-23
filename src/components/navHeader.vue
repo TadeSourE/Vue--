@@ -1,7 +1,7 @@
 <template>
     <div class="header-container"> 
         <div class="header-left flex-box">
-            <el-icon class="icon" size="20"><Fold/></el-icon>
+            <el-icon class="icon" size="20" @click="store.commit('collapseMenu')"><Fold/></el-icon>
         </div>
         <div class="header-right">
             <el-dropdown>
@@ -24,8 +24,11 @@
         </div>
     </div>
 </template>
-<script>
+<script setup>
 import { Fold } from '@element-plus/icons-vue';
+import { useStore } from 'vuex'; //获取store实例
+
+const store = useStore()
 
 
 </script>
@@ -47,9 +50,14 @@ import { Fold } from '@element-plus/icons-vue';
         .icon{
             width: 45px;
             height: 100%;
+            transition: background-color 0.2s ease;
             &:hover{
             background-color: #daf3f8;
             cursor: pointer;
+            }
+            &:active{
+            transform: scale(0.95);
+            transition: transform 0.1s ease;
             }
         }
     }
